@@ -1,0 +1,17 @@
+﻿version: '3'
+
+services:
+  gestaoproduto:
+    image: postgres
+    container_name: gestaoproduto
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DB: gestaoproduto
+      POSTGRES_USER: gestaoproduto
+      POSTGRES_PASSWORD: gestaoproduto
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  pg_data:
